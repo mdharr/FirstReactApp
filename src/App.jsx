@@ -1,18 +1,20 @@
-import './App.css'
-import Button from './components/Button'
+import ProductCard from './components/ProductCard/ProductCard'
 
 function App() {
-  const handleClick = () => {
-    alert('Button clicked!')
+  const sampleProduct = {
+    name: "Wireless Headphones",
+    description: "High-quality wireless headphones with noise cancellation",
+    imageUrl: "/api/placeholder/400/320",
+    currentPrice: 79.99,
+    originalPrice: 119.99,
+    onSale: true,
+    rating: 4,
+    reviewCount: 128
   }
 
   return (
-    <div className="p-4">
-      <h1>My First React App</h1>
-      <Button 
-        text="Click Me!" 
-        onClick={handleClick}
-      />
+    <div className="p-8">
+      <ProductCard product={sampleProduct} />
     </div>
   )
 }
